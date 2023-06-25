@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in homepage %}
+            <tr>
+                <td>{{ data.symbol }}</td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.total_shares }}</td>
+                <td>{{ data.stock_price_current }}</td>
+                <td>{{ data.total_amount_in_share }}</td>
+            </tr>
+            {% endfor %}
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>Cash</th>
+                <td>{{ cash_remaining }}</td>
+
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>Total</th>
+                <td>{{ total_value }}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<div>
+    <form action="/cash" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="cash" name="cash" placeholder="Enter Amount" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Cash</button>
+    </form>
+</div>
+
+{% endblock %}

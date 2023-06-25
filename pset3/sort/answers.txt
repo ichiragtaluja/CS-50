@@ -1,0 +1,19 @@
+sort1 uses: Bubble sort
+
+How do you know?: It is because time taken by sort1 to solve the sorted5000,random10000 and random50000 was 0.031s, 0.059s and 0.717s, which
+                was quite fast compared to both Random and Reversed texts. For example, time taken for random5000,random10000 and random50000 was
+                0.075s, 0.318s and 8.04s. Time taken for reversed was almost as long as for random.
+
+sort2 uses: Merge sort
+
+How do you know?: Firstly, because for all the three groups i.e. random, reversed or sorted, time taken was the sameand that was shorter
+                    than sort3 by a huge margin. For example, time taken for random50000, random10000 and random50000
+                    was only .046s, .076s and .838s.
+
+
+sort3 uses: Selection sort
+
+How do you know?: Because, no matter if the set was random, reversed or sorted, time took to sort for all of the sets were
+                    in the same range. and especially, if the set size was larger, it was taking a huge time to get the output done.
+                    for example, Reversed5000 took 0.051s whereas reversed50000 took 3.64s
+
